@@ -350,12 +350,12 @@ img {
 	content: "";
 	position: absolute;
 
-	top: 31px;
+	top: 98%;
 	left: 0;
 
 
 	width: 75px;
-	height: 2px;
+	height: 4px;
 	border-bottom: 2px solid #fb565a;
 }
 
@@ -1493,18 +1493,18 @@ input[type="radio"].visually-hidden {
 
 .modal-close {
 	position: absolute;
-	top: 20px;
-	right: 20px;
-	width: 0px;
-	height: 0px;
+	top: 80px;
+	right: 80px;
+	width: 20px;
+	height: 20px;
 
 	font-size: 0;
-	background-color: #ffffff;
+	background-color: #fff;
 	border: 0;
 
 	cursor: pointer;
-	border: none;
-	outline: none;
+	
+	
 }
 
 .modal-close::before,
@@ -1512,8 +1512,8 @@ input[type="radio"].visually-hidden {
 	content: "";
 
 	position: absolute;
-	top: 80px;
-	left: -80px;
+	top: 8px;
+	left: -1px;
 
 	width: 21px;
 	height: 3px;
@@ -1528,6 +1528,19 @@ input[type="radio"].visually-hidden {
 
 .modal-close::after {
 	transform: rotate(-45deg);
+}
+
+.modal-close:hover::before,
+.modal-close:hover::after {
+	background-color: #fb565a;
+	opacity: 1;
+}
+
+ .modal-close:focus::before,
+ .modal-close:focus::after {
+	background-color: #fb565a;
+	opacity: 0.1;
+	border: #ffffff;
 }
 
 .modal-feedback-title {
@@ -1583,11 +1596,13 @@ textarea {
 }
 
 textarea,
-.modal-login input:required{
+.modal-login input {
 	padding: 15px;
 	color: #444444;
 	border: 2px solid #b4b9bb;
 	opacity: 0.5;
+	outline: none;
+	box-shadow: none;
 }
 
 textarea:hover,
@@ -1602,30 +1617,17 @@ textarea:focus,
 }
 
 
+textarea:focus:invalid,
+ .modal input:focus:invalid {
+	border: 2px solid red;
+	opacity: 1;
+}
+
+
 textarea:focus::placeholder,
-.modal input:focus::placeholder {
+ .modal input:focus::placeholder {
 	color: red;
 	opacity: 1;
-}
-
-textarea:invalid:focus,
- .modal input:invalid:focus {
-	outline-color: red;
-	border:none;
-	opacity: 1;
-}
-
-.modal-close:hover::before,
-.modal-close:hover::after {
-	background-color: #fb565a;
-	opacity: 1;
-}
-
- .modal-close:focus::before,
- .modal-close:focus::after {
-	background-color: #fb565a;
-	opacity: 0.1;
-	border: #ffffff;
 }
 
 ::-webkit-input-placeholder {
@@ -1644,19 +1646,52 @@ textarea:invalid:focus,
 	color: black;
 }
 
-textarea:focus::placeholder,
- .modal input:focus::placeholder {
-	color: red;
-	opacity: 1;
-}
-
-textarea:invalid:focus,
-.modal input:invalid:focus {
-	outline-color: red;
-	border:none;
-	opacity: 1;
-}
-
 .modal-show {
-	display: flex;
+	display: block;
+	animation: bounce 0.6s;
+	
 }
+
+.modal-error {
+	animation: shake 0.6s;
+}
+
+@keyframes bounce {
+	0% {
+	  transform: translateY(-2000px);
+	}
+  
+	70% {
+	  transform: translateY(30px);
+	}
+  
+	90% {
+	  transform: translateY(-10px);
+	}
+  
+	100% {
+	  transform: translateY(0);
+	}
+  }
+
+  @keyframes shake {
+	0%,
+	100% {
+	  transform: translateX(0);
+	}
+  
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+	  transform: translateX(-10px);
+	}
+  
+	20%,
+	40%,
+	60%,
+	80% {
+	  transform: translateX(10px);
+	}
+  }
