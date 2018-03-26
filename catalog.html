@@ -30,9 +30,9 @@
 		</div>
 		</header>
 		<main class="container">
-			<h2 class="visually-hidden">Фильтр Сайтов</h2>
 			<div class="catalog-columns">
 				<Section class="catalog-left-column">
+					<h2 class="visually-hidden">Фильтр Сайтов</h2>
 					<form class="filter" method="get" action="https://echo.htmlacademy.ru">
 						<fieldset class="filter-item">
 							<legend class="filter-title">Стоимость:</legend>
@@ -103,7 +103,7 @@
 								</li>
 							</ul>
 						</fieldset>
-						<button type="submit" class="button button-show" href="#">Показать</button>
+						<button type="submit" class="button button-show">Показать</button>
 					</form>
 				</section>
 				<section class="catalog-right-column">
@@ -260,6 +260,7 @@
 			</div>
 		</footer>
 		<section class="modal modal-login">
+			<h3 class="visually-hidden">Модальное окно</h3>
 			<form class="form-login" action="https://echo.htmlacademy.ru" method="post">
 				<b class="modal-feedback-title">Напишите нам</b>
 				<div class="form-info">
@@ -269,11 +270,11 @@
 					</div>
 					<div class="modal-feedback-column">
 						<label class="modal-feedback-data" for="modal-feedback-email">Ваш e-mail:</label>
-						<input type="email" name="email" id="modal-feedback-email" placeholder="Для отправки ответа" required>
+						<input class="email-user" type="email" name="email" id="modal-feedback-email" placeholder="Для отправки ответа" required>
 					</div>
 					<div class="modal-feedback-column">
 						<label class="modal-feedback-data" for="modal-feedback-textarea">Текст письма:</label>
-						<textarea name="text" id="modal-feedback-textarea" placeholder="В свободной форме" required rows="5"></textarea>
+						<textarea class="text-user" name="text" id="modal-feedback-textarea" placeholder="В свободной форме" required rows="4"></textarea>
 					</div>
 				</div>
 				<button type="submit" class="button modal-feedback-btn">Отправить</button>
