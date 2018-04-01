@@ -34,13 +34,11 @@ a {
 }
 
 .button {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: flex-inline;
 
 	width: 240px;
-	padding: 15px 0;
-
+	padding: 15px 20px;
+	margin-right: 900px;
 	font-size: 16px;
 	line-height: 18px;
 	color: #ffffff;
@@ -233,7 +231,7 @@ a {
 	position: absolute;
 
 	left: 50%;
-	bottom: 104px;
+	top: 300px;
 	width: 160px;
 	height: 18px;
 
@@ -448,7 +446,7 @@ a {
 
 	margin: 0;
 	padding: 0;
-	margin-bottom: 35px;
+	margin-bottom: 34px;
 }
 
 .line-item-separation {
@@ -588,8 +586,9 @@ a {
 .brand-menu {
 	margin: 0;
 	padding: 0;
-	padding: 37px 0;
-	margin-bottom: 81px;
+	padding-top: 40px;
+	padding-bottom: 38px;
+	margin-bottom: 79px;
 
 	border-top: 2px solid #eeeeee;
 	border-bottom: 2px solid #eeeeee;
@@ -598,6 +597,7 @@ a {
 .brand {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 
 	margin: 0;
 	padding: 0;
@@ -638,7 +638,6 @@ a {
 
 	margin: 0;
 	padding: 0;
-	margin-right: 40px;
 	width: 260px;
 }
 
@@ -693,18 +692,22 @@ a {
 }
 
 .map-image {
-	width: 100%;
-	height: 100%;
-	vertical-align: middle;
-	text-align: center;
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	height: 100%;
+
+	vertical-align: middle;
+	text-align: center;
 }
 
 .map-image::after {
 	content: "";
+	
 	display: inline-block;
+
 	height: 100%;
+
 	vertical-align: middle;
 }
 
@@ -732,13 +735,13 @@ a {
 }
 
 .title-contacts {
-	text-transform: uppercase;
 	margin-bottom: 24px;
 	margin-top: -3px;
 
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 700;
+	text-transform: uppercase;
 }
 
 .adress-contacts {
@@ -775,7 +778,6 @@ a {
 .footer-columns {
 	display: flex;
 	flex-wrap: wrap;
-
 	margin-bottom: 80px;
 }
 
@@ -801,6 +803,7 @@ a {
 	width: 78px;
 	height: 78px;
 	margin-right: 13px;
+	margin-bottom: 13px;
 
 	border-radius: 50%;
 	background-color: #e1e1e1;
@@ -827,7 +830,8 @@ a {
 
 .footer-info {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+	flex-grow: 1;
 
 	width: 605px;
 	min-height: 80px;
@@ -836,7 +840,7 @@ a {
 .footer-title {
 	display: block;
 
-	margin-bottom: 6px;
+	margin-bottom: 8px;
 	margin-left: 39px;
 	margin-top: 6px;
 
@@ -855,7 +859,7 @@ a {
 	color: #444444;
 }
 
-/*Сложный фильтр*/
+/*Фильтр цена*/
 
 .bar {
 	width: 65%;
@@ -879,8 +883,8 @@ a {
 .filter-item legend {
 	font-size: 18px;
 	line-height: 30px;
-	text-transform: uppercase;
 	font-weight: 700;
+	text-transform: uppercase;
 }
 
 .range-controls {
@@ -922,6 +926,7 @@ a {
 	background-color: #ababab;
 	box-shadow: 0 2px 1px 0 #cfcfcf;
 	border-radius: 50%;
+
 	cursor: pointer;
 }
 
@@ -939,6 +944,7 @@ a {
 
 .price-controls label {
 	display: inline-block;
+
 	width: 50%;
 
 	font-size: 16px;
@@ -950,7 +956,7 @@ a {
 	padding: 8px 10px;
 	margin-left: 12px;
 
-	font-family: Roboto, Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 16px;
 	text-align: center;
 	color: #283136;
@@ -998,6 +1004,7 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 	margin: 0;
 	margin-bottom: 54px;
+
 	border: none;
 }
 
@@ -1048,15 +1055,15 @@ input[type="radio"].visually-hidden {
 
 .filter-input-radio + label::before {
 	content: "";
+
 	position: absolute;
 
 	left: -36px;
 	top: -4px;
-
 	width: 16px;
 	height: 16px;
-	border-radius: 50%;
 
+	border-radius: 50%;
 	border: 4px solid #4d4d4d;
 	opacity: 0.4;
 }
@@ -1068,21 +1075,21 @@ input[type="radio"].visually-hidden {
 
 	top: 4px;
 	left: -28px;
-
 	width: 8px;
 	height: 8px;
-	border-radius: 50%;
 
+	border-radius: 50%;
 	background-color: #4d4d4d;
 	opacity: 0.4;
 }
 
 .filter-input-checkbox + label::before {
 	content: "";
+
 	position: absolute;
+
 	left: -36px;
 	top: -2px;
-
 	width: 27px;
 	height: 23px;
 
@@ -1096,11 +1103,12 @@ input[type="radio"].visually-hidden {
 	content: "";
 
 	position: absolute;
+
 	top: -2px;
 	left: -36px;
-
 	width: 27px;
 	height: 23px;
+
 	background-image: url("../img/checkbox-on.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -1161,13 +1169,11 @@ input[type="radio"].visually-hidden {
 .catalog-right-column {
 	width: 800px;
 	margin: 0;
-	padding:0;
+	padding: 0;
 }
 
 .column-container-menu {
 	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
 	justify-content: space-between;
 
 	margin: 0;
@@ -1178,7 +1184,6 @@ input[type="radio"].visually-hidden {
 .list-item {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
 
 	padding: 0;
 	margin: 0;
@@ -1198,7 +1203,7 @@ input[type="radio"].visually-hidden {
 .catalog-sort {
 	margin: 0;
 	padding: 0;
-	margin-top: -2px;
+	margin-top: 0px;
 	margin-left: 40px;
 
 	font-size: 18px;
@@ -1220,9 +1225,8 @@ input[type="radio"].visually-hidden {
 	opacity: 1;
 }
 
-.arrow-list{
+.arrow-list {
 	display: flex;
-	flex-wrap: wrap;
 
 	margin: 0;
 	padding: 0;
@@ -1244,7 +1248,7 @@ input[type="radio"].visually-hidden {
 .arrow {
 	display: flex;
 
-	margin-left: 0px;
+	margin-top: 5px;
 	margin-left: 22px;
 
 	font-size: 0;
@@ -1396,12 +1400,11 @@ input[type="radio"].visually-hidden {
 	margin-top: 25px;
 	margin-bottom: 12px;
 
-	text-align: center;
-
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 30px;
+	text-align: center;
 	color: #000000;
 }
 
@@ -1493,8 +1496,8 @@ input[type="radio"].visually-hidden {
 	border-radius: 3px;
 }
 .pagination-item a:active {
-	background-color: #dfdfdf;
 	color: rgba(0, 0, 0, 0.3);
+	background-color: #dfdfdf;
 	box-shadow: 0px 3px rgba(0, 0, 0, 0.1) inset;
 }
 
@@ -1637,7 +1640,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form-login textarea {
-	margin: 0px;
+	margin: 0;
 	width: 728px;
 	padding: 5px 15px 10px;
 
