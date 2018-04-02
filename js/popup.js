@@ -9,8 +9,8 @@ var close = document.querySelector(".modal-close");
   });
 
 close.addEventListener("click", function (evt) {
-	evt.preventDefault();
-	popup.classList.remove("modal-show");
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
 });
 
    window.addEventListener("keydown", function (evt) {
