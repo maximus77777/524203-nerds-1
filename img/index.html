@@ -216,15 +216,15 @@
 				<div class="form-info">
 					<div class="modal-feedback-column">
 						<label class="modal-feedback-data" for="modal-feedback-login">Ваше имя:</label>
-						<input class="login-user" type="text" name="login" pattern=^[a-zA-Z]+$ id="modal-feedback-login" placeholder="Представьтесь, пожалуйста">
+						<input class="login-user" type="text" name="login" id="modal-feedback-login" placeholder="Представьтесь, пожалуйста" required>
 					</div>
 					<div class="modal-feedback-column">
 						<label class="modal-feedback-data" for="modal-feedback-email">Ваш e-mail:</label>
-						<input class="email-user" type="email" name="email" id="modal-feedback-email" placeholder="Для отправки ответа">
+						<input class="email-user" type="email" name="email" id="modal-feedback-email" placeholder="Для отправки ответа" required>
 					</div>
 					<div class="modal-feedback-column">
 						<label class="modal-feedback-data" for="modal-feedback-textarea">Текст письма:</label>
-						<textarea class="text-user" name="text" id="modal-feedback-textarea" placeholder="В свободной форме"></textarea>
+						<textarea class="text-user" name="text" id="modal-feedback-textarea" placeholder="В свободной форме" required></textarea>
 					</div>
 				</div>
 				<button type="submit" class="button modal-feedback-btn">Отправить</button>
