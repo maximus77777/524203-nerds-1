@@ -41,6 +41,7 @@ a {
 	text-transform: uppercase;
 	text-align: center;
 	text-decoration: none;
+	word-break: break-all;
 	vertical-align: middle;
 
 	background-color: #fb565a;
@@ -204,8 +205,9 @@ a {
 }
 
 .slider-item-button {
-	padding: 15px 55px;
 	margin-right: 900px;
+	padding: 15px 55px; 
+
 }
 
 /*Слайдер*/
@@ -1477,6 +1479,7 @@ input[type="radio"].visually-hidden {
 	color: #000000;
 
 	background-color: #eeeeee;
+	border-radius: 3px;
 }
 
 .pagination-item:last-child a {
